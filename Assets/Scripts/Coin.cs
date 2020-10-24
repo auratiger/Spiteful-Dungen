@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private AudioClip coinPickUpSFX;
+    [SerializeField] private AudioClip audioClip;
     [SerializeField] private int points = 5;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        AudioSource.PlayClipAtPoint(coinPickUpSFX, Camera.main.transform.position);
+        FindObjectOfType<SFXPlayer>().PlayAudioClip(audioClip);
+        
         FindObjectOfType<GameSession>().AddToScore(points);
+        
         Destroy(gameObject);
     }
 }

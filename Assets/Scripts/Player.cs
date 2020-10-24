@@ -6,37 +6,38 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float runSpeed = 5f;
-    [SerializeField] private float jumpSpeed = 5f;
-    [SerializeField] private float climbSpeed = 5f;
-    [SerializeField] private Vector2 deathKick  = new Vector2(250f, 250f);
+    [SerializeField] protected float runSpeed = 5f;
+    [SerializeField] protected float jumpSpeed = 5f;
+    [SerializeField] protected float climbSpeed = 5f;
+    [SerializeField] protected Vector2 deathKick  = new Vector2(250f, 250f);
     
-    private Rigidbody2D myRidigBody;
-    private Animator myAnimator;
-    private CapsuleCollider2D bodyCollider;
-    private BoxCollider2D legsCollider;
-    private float gravitySlaceAtStart;
+    protected Rigidbody2D myRidigBody;
+    protected Animator myAnimator;
+    protected CapsuleCollider2D bodyCollider;
+    protected BoxCollider2D legsCollider;
+    protected float gravitySlaceAtStart;
 
-    private bool isAlive = true;
+    protected bool _isAlive = true;
+    protected bool _isInvulnerable = false;
     
     // Input Controls
-    private const string HORIZONTAL = "Horizontal";
-    private const string VERTICAL = "Vertical";
-    private const string FIRE3 = "Fire3";
-    private const string JUMP = "Jump";
+    protected const string HORIZONTAL = "Horizontal";
+    protected const string VERTICAL = "Vertical";
+    protected const string FIRE3 = "Fire3";
+    protected const string JUMP = "Jump";
 
     // Layer names
-    private const string Ground = "Ground";
-    private const string Climbing = "Climbing";
-    private const string Enemy = "Enemy";
-    private const string Hazards = "Hazards";
+    protected const string Ground = "Ground";
+    protected const string Climbing = "Climbing";
+    protected const string Enemy = "Enemy";
+    protected const string Hazards = "Hazards";
 
 
     // Animator bool hashes
-    private static readonly int IsRunning = Animator.StringToHash("isRunning");
-    private static readonly int IsClimbing = Animator.StringToHash("isClimbing");
-    private static readonly int Die = Animator.StringToHash("Die");
-    private static readonly int isRoll = Animator.StringToHash("Roll");
+    protected static readonly int IsRunning = Animator.StringToHash("isRunning");
+    protected static readonly int IsClimbing = Animator.StringToHash("isClimbing");
+    protected static readonly int Die = Animator.StringToHash("Die");
+    protected static readonly int isRoll = Animator.StringToHash("Roll");
 
 
     // Start is called before the first frame update
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) return;
+        if (!_isAlive) return;
         
         Run();
         Roll();
@@ -112,21 +113,22 @@ public class Player : MonoBehaviour
         myAnimator.SetBool(IsClimbing, playerHasHorizontalSpeed);
     }
 
-    private void FlipSprite()
+    protected void FlipSprite()
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(myRidigBody.velocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
             transform.localScale = new Vector2(Mathf.Sign(myRidigBody.velocity.x), 1f);
         }
-        
     }
 
-    private void TriggerDeath()
+    protected void TriggerDeath()
     {
         if (bodyCollider.IsTouchingLayers(LayerMask.GetMask(Enemy, Hazards)))
         {
-            isAlive = false;
+            if (_isInvulnerable) return;
+            
+            _isAlive = false;
             myAnimator.SetTrigger(Die);
             myRidigBody.velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
@@ -136,6 +138,16 @@ public class Player : MonoBehaviour
     public void SetMovementSpeed(int speed)
     {
         runSpeed = speed;
+    }
+
+    public void BecomeInvulnerable()
+    {
+        _isInvulnerable = true;
+    }
+
+    public void DisableInvulnerable()
+    {
+        _isInvulnerable = false;
     }
 
 }
