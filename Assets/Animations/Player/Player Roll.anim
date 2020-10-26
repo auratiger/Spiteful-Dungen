@@ -84,17 +84,10 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 25
-    messageOptions: 0
-  - time: 0
-    functionName: BecomeInvulnerable
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
+    intParameter: 15
     messageOptions: 0
   - time: 0.33333334
-    functionName: DisableInvulnerable
+    functionName: StopRoll
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

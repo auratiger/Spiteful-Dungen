@@ -125,16 +125,38 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Coin.cs" t="Include" />
-          <e p="EnemyMovement.cs" t="Include" />
+          <e p="ConstValues" t="Include">
+            <e p="Controls.cs" t="Include" />
+            <e p="Layers.cs" t="Include" />
+            <e p="PlayerAnimations.cs" t="Include" />
+          </e>
+          <e p="Enemies" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="Slime.cs" t="Include" />
+          </e>
           <e p="GameSession.cs" t="Include" />
+          <e p="GateController.cs" t="Include" />
+          <e p="Interactables" t="Include">
+            <e p="Coin.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IDamageable.cs" t="Include" />
+          </e>
           <e p="LevelExit.cs" t="Include" />
+          <e p="MainScreenPlayerMovements.cs" t="Include" />
           <e p="Player.cs" t="Include" />
-          <e p="PlayerWanderingMovement.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
           <e p="ScenePersist.cs" t="Include" />
           <e p="SettingsController.cs" t="Include" />
           <e p="SFXPlayer.cs" t="Include" />
+          <e p="StartMenuController.cs" t="Include" />
+          <e p="UnityCore" t="Include">
+            <e p="Audio" t="Include">
+              <e p="AudioController.cs" t="Include" />
+              <e p="AudioType.cs" t="Include" />
+              <e p="TestAudio.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">

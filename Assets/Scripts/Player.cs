@@ -1,14 +1,24 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using DefaultNamespace;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
-    [SerializeField] protected float runSpeed = 5f;
+    [Header("Player stats")]
+    [SerializeField] protected int health = 100;
+    [SerializeField] protected int baseDamage = 5;
+    
+    [Header("Movement")]
+    [SerializeField] protected float movementSpeed = 5f;
     [SerializeField] protected float jumpSpeed = 5f;
     [SerializeField] protected float climbSpeed = 5f;
+    
+    [Space]
+    [Tooltip("the force added to the player body upon death")]
     [SerializeField] protected Vector2 deathKick  = new Vector2(250f, 250f);
     
     protected Rigidbody2D myRidigBody;
@@ -17,28 +27,16 @@ public class Player : MonoBehaviour
     protected BoxCollider2D legsCollider;
     protected float gravitySlaceAtStart;
 
-    protected bool _isAlive = true;
-    protected bool _isInvulnerable = false;
-    
-    // Input Controls
-    protected const string HORIZONTAL = "Horizontal";
-    protected const string VERTICAL = "Vertical";
-    protected const string FIRE3 = "Fire3";
-    protected const string JUMP = "Jump";
+    // player states
+    private bool m_IsRunning = false;
+    private bool m_IsRolling = false;
+    private bool m_IsInvulnerable = false;
+    private bool m_IsAlive = true;
 
-    // Layer names
-    protected const string Ground = "Ground";
-    protected const string Climbing = "Climbing";
-    protected const string Enemy = "Enemy";
-    protected const string Hazards = "Hazards";
+    // animation state
+    private int m_CurrentState;
 
-
-    // Animator bool hashes
-    protected static readonly int IsRunning = Animator.StringToHash("isRunning");
-    protected static readonly int IsClimbing = Animator.StringToHash("isClimbing");
-    protected static readonly int Die = Animator.StringToHash("Die");
-    protected static readonly int isRoll = Animator.StringToHash("Roll");
-
+#region Unity Functions 
 
     // Start is called before the first frame update
     void Start()
@@ -54,66 +52,33 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_isAlive) return;
+        if (!m_IsAlive) return;
+
+        var isGrounded = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Ground));
+        var isClimbing = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Climbing));
         
-        Run();
-        Roll();
-        ClimbLadder();
-        Jump();
+        Move();
         FlipSprite();
-        TriggerDeath();
-    }
-
-    private void Run()
-    {
-        float controlThrow = CrossPlatformInputManager.GetAxis(HORIZONTAL);
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRidigBody.velocity.y);
-        myRidigBody.velocity = playerVelocity;
-
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRidigBody.velocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool(IsRunning, playerHasHorizontalSpeed);
-    }
-
-    private void Jump()
-    {
-        if (!legsCollider.IsTouchingLayers(LayerMask.GetMask(Ground))) return;
+        Jump(isGrounded);
+        Roll(isGrounded);
+        ClimbLadder(isClimbing);
         
-        if (CrossPlatformInputManager.GetButtonDown(JUMP))
-        {
-            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
-            myRidigBody.velocity += jumpVelocityToAdd;
-        }
+        HandleAnimation(isClimbing);
+        
+        // TriggerDeath();
     }
+    
+#endregion
 
-    private void Roll()
+#region PublicFunctions
+
+    public void StopRoll()
     {
-        if (!legsCollider.IsTouchingLayers(LayerMask.GetMask(Ground))) return;
-
-        if (CrossPlatformInputManager.GetButtonDown(FIRE3))
-        {
-            myAnimator.SetTrigger(isRoll);
-        }
+        m_IsRolling = false;
+        m_IsInvulnerable = false;
     }
-
-    private void ClimbLadder()
-    {
-        if (!legsCollider.IsTouchingLayers(LayerMask.GetMask(Climbing)))
-        {
-            myAnimator.SetBool(IsClimbing, false);
-            myRidigBody.gravityScale = gravitySlaceAtStart;
-            return;
-        }
-
-        float controlThrow = CrossPlatformInputManager.GetAxis(VERTICAL);
-        Vector2 climbVelocity = new Vector2(myRidigBody.velocity.x, controlThrow * climbSpeed);
-        myRidigBody.velocity = climbVelocity;
-        myRidigBody.gravityScale = 0;
-
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRidigBody.velocity.y) > Mathf.Epsilon;
-        myAnimator.SetBool(IsClimbing, playerHasHorizontalSpeed);
-    }
-
-    protected void FlipSprite()
+    
+    public void FlipSprite()
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(myRidigBody.velocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
@@ -121,33 +86,165 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRidigBody.velocity.x), 1f);
         }
     }
-
-    protected void TriggerDeath()
+    
+    public void SetMovementSpeed(int speed)
     {
-        if (bodyCollider.IsTouchingLayers(LayerMask.GetMask(Enemy, Hazards)))
+        movementSpeed = speed;
+    }
+    
+    public void TakeDame(int damage)
+    {
+        if (!m_IsInvulnerable)
         {
-            if (_isInvulnerable) return;
+            health -= damage;
+        }
+
+        if (health <= 0)
+        {
+            TriggerDeath();
+        }
+    }
+    
+    public void TriggerDeath()
+    {
+        m_IsAlive = false;
+        ChangeAnimationState(PlayerAnimations.PLAYER_DIE);
+        myRidigBody.velocity = deathKick;
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+    }
+
+#endregion
+
+#region Private Functions 
+
+    private void Move()
+    {
+        float controlThrow = CrossPlatformInputManager.GetAxis(Controls.HORIZONTAL);
+                
+        Vector2 playerVelocity = new Vector2(controlThrow * movementSpeed, myRidigBody.velocity.y);
+        myRidigBody.velocity = playerVelocity;
+        
+        
+        if (!m_IsRunning)
+        {
+            m_IsRunning = CrossPlatformInputManager.GetButtonDown(Controls.FIRE3);
+        }
+        else
+        {
+            m_IsRunning = !CrossPlatformInputManager.GetButtonUp(Controls.FIRE3);
+        }
+        
+    }
+
+    private void HandleAnimation(bool isClimbing)
+    {
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRidigBody.velocity.x) > Mathf.Epsilon;
+
+        if (isClimbing)
+        {
+            // TODO make it so the player can stand still on the top of the ladder
             
-            _isAlive = false;
-            myAnimator.SetTrigger(Die);
-            myRidigBody.velocity = deathKick;
-            FindObjectOfType<GameSession>().ProcessPlayerDeath();
+            bool playerVerticalSpeed = Mathf.Abs(myRidigBody.velocity.y) > Mathf.Epsilon;
+            if(playerVerticalSpeed) ChangeAnimationState(PlayerAnimations.PLAYER_CLIMB);
+            
+        }
+        else
+        {
+            if (m_IsRolling)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_ROLL);
+            }
+            else if (playerHasHorizontalSpeed && m_IsRunning)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_RUNN);
+            }
+            else if (playerHasHorizontalSpeed)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_WALK);
+            }
+            else
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_IDLE);
+            }
         }
     }
 
-    public void SetMovementSpeed(int speed)
+    private void Jump(bool isGrounded)
     {
-        runSpeed = speed;
+        if(!isGrounded) return;
+        
+        if (CrossPlatformInputManager.GetButtonDown(Controls.JUMP))
+        {
+            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+            myRidigBody.velocity += jumpVelocityToAdd;
+        }
     }
 
-    public void BecomeInvulnerable()
+    private void Roll(bool isGrounded)
     {
-        _isInvulnerable = true;
+        if(!isGrounded) return;
+        
+        if (CrossPlatformInputManager.GetButtonDown(Controls.FIRE2))
+        {
+            m_IsRolling = true;
+            m_IsInvulnerable = true;
+        }
     }
 
-    public void DisableInvulnerable()
+
+    private void ClimbLadder(bool isClimbing)
     {
-        _isInvulnerable = false;
+        if (!isClimbing)
+        {
+            myRidigBody.gravityScale = gravitySlaceAtStart;
+            return;
+        }
+
+        float controlThrow = CrossPlatformInputManager.GetAxis(Controls.VERTICAL);
+        Vector2 climbVelocity = new Vector2(myRidigBody.velocity.x, controlThrow * climbSpeed);
+        myRidigBody.velocity = climbVelocity;
+        myRidigBody.gravityScale = 0;
     }
+
+    
+    private void ChangeAnimationState(int newState)
+    {
+        // stop the same animation from interrupting itself
+        if (m_CurrentState == newState) return;
+        
+        // play the animation
+        myAnimator.Play(newState);
+
+        // reassign the current state
+        m_CurrentState = newState;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Enemy enemy = other.collider.GetComponent<Enemy>();
+
+        if (enemy != null)
+        {
+            foreach (ContactPoint2D point in other.contacts)
+            {
+                Debug.Log(point.normal);
+
+                if (point.normal.y >= 0.9f)
+                {
+                    Vector2 jumpVelocityToAdd = new Vector2(myRidigBody.velocity.x, jumpSpeed);
+                    myRidigBody.velocity = jumpVelocityToAdd;
+
+                    enemy.TakeDame(baseDamage);
+                }
+                else
+                {
+                    TakeDame(enemy.GetDamage());
+                }
+            }
+        }
+    }
+    
+    
+#endregion
 
 }

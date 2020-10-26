@@ -5,12 +5,13 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 // this child class is designed for giving the character random movements in the world
-public class PlayerWanderingMovement : Player
+public class MainScreenPlayerMovements : Player
 {
     [SerializeField] private float walkTime = 5f;
     [SerializeField] private float waitTime = 5f;
 
     private bool isWalking;
+    private bool exit;
     private float walkCounter;
     private float waitCounter;
     private int WalkDirection;
@@ -27,7 +28,14 @@ public class PlayerWanderingMovement : Player
     // Update is called once per frame
     void Update()
     {
-        RandomCharacterMovement();
+        if (!exit)
+        {
+            RandomCharacterMovement();
+        }
+        else
+        {
+            RunRigth();
+        }
     }
 
     private void RandomCharacterMovement()
@@ -35,7 +43,7 @@ public class PlayerWanderingMovement : Player
         if (isWalking)
         {
             // start animation
-            myAnimator.SetBool(IsRunning, true);
+            // myAnimator.SetBool(IsRunning, true);
 
             walkCounter -= Time.deltaTime;
             
@@ -49,10 +57,10 @@ public class PlayerWanderingMovement : Player
             switch (WalkDirection)
             {
                 case 0:
-                    myRidigBody.velocity = new Vector2(-runSpeed, myRidigBody.velocity.y);
+                    myRidigBody.velocity = new Vector2(-movementSpeed, myRidigBody.velocity.y);
                     break;                    
                 case 1:
-                    myRidigBody.velocity = new Vector2(runSpeed, myRidigBody.velocity.y);
+                    myRidigBody.velocity = new Vector2(movementSpeed, myRidigBody.velocity.y);
                     break;
             }
 
@@ -62,7 +70,7 @@ public class PlayerWanderingMovement : Player
         else
         {
             // stop animation
-            myAnimator.SetBool(IsRunning, false);
+            // myAnimator.SetBool(IsRunning, false);
 
             waitCounter -= Time.deltaTime;
             
@@ -73,6 +81,20 @@ public class PlayerWanderingMovement : Player
                 ChoseDirection();
             }
         }
+    }
+
+    private void RunRigth()
+    {
+        myRidigBody.velocity = new Vector2(movementSpeed, myRidigBody.velocity.y);
+        
+        FlipSprite();
+
+        // myAnimator.SetBool(IsRunning, true);
+    }
+
+    public void TriggerExit()
+    {
+        exit = true;
     }
 
     private void ChoseDirection()

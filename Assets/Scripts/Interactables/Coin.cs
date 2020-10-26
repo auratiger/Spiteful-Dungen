@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -10,7 +11,6 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         FindObjectOfType<SFXPlayer>().PlayAudioClip(audioClip);
-        
         FindObjectOfType<GameSession>().AddToScore(points);
         
         Destroy(gameObject);

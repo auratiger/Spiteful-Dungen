@@ -17,6 +17,8 @@ public class SFXPlayer : MonoBehaviour
     {
         _audioSource.clip = clip;
         _audioSource.Play();
+        
+        
     }
     
 }

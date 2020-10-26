@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 935792870729822633}
   - component: {fileID: 935792870729822635}
   - component: {fileID: 1138408176}
-  - component: {fileID: 2333683996341695394}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -47,7 +46,7 @@ Animator:
   m_GameObject: {fileID: 935792870729822637}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4fe945b6582c8dc478c17ef706721984, type: 2}
+  m_Controller: {fileID: 9100000, guid: d2300dc6156a7294ebeb475a54d7714e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -141,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040948987, y: -0.440251}
+  m_Offset: {x: -0.040948987, y: -0.43915904}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -152,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43687272, y: 0.13228154}
+  m_Size: {x: 0.43687272, y: 0.13009763}
   m_EdgeRadius: 0
 --- !u!114 &935792870729822635
 MonoBehaviour:
@@ -166,27 +165,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf31cfb14c65dc241a783d7359edce86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 6
+  health: 100
+  baseDamage: 5
+  movementSpeed: 5
   jumpSpeed: 28
   climbSpeed: 5
   deathKick: {x: 25, y: 25}
 --- !u!70 &1138408176
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935792870729822637}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: d9bd371468e94634da747d5294c7ff7a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.032518983, y: -0.08536208}
-  m_Size: {x: 0.65855145, y: 0.7804973}
-  m_Direction: 0
---- !u!70 &2333683996341695394
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12,13 +12,18 @@ public class SettingsController : MonoBehaviour
 
     private Resolution[] resolutions;
 
+#region Unity Functions
+
     private void Start()
     {
         ManageResolutions();
     }
 
-    
-    // === Resolutions ===
+
+#endregion
+
+#region Resolution Settings
+
     private void ManageResolutions()
     {
         // saves all available resolutions 
@@ -56,8 +61,10 @@ public class SettingsController : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
+#endregion
+
+#region Adio Settings
     
-    // === Audio ===
     public void SetMasterVolume(float volume)
     {
         audioMixer.SetFloat("MasterVolume", volume);
@@ -73,9 +80,9 @@ public class SettingsController : MonoBehaviour
         audioMixer.SetFloat("SFXVolume", volume);
     }
 
+    
+#endregion
 
-    
-    
 
 
 }
