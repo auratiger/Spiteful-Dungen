@@ -23,6 +23,6 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         return damage;
     }
 
-    public abstract void TakeDame(int damage);
+    public abstract void TakeDamage(int damage);
     public abstract void TriggerDeath();
 }

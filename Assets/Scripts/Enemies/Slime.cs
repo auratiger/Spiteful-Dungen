@@ -26,7 +26,7 @@ namespace Enemies
         {
             if (_bodyCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
             {
-                FindObjectOfType<Player>().TakeDame(damage);
+                FindObjectOfType<Player>().TakeDamage(damage);
             }
         }
         
@@ -42,7 +42,7 @@ namespace Enemies
             }
         }
 
-        public override void TakeDame(int _damage)
+        public override void TakeDamage(int _damage)
         {
             health -= _damage;
 

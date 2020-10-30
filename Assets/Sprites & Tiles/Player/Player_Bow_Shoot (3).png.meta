@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 39149d038ebacab48a5cb5df16ee8b00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4513489010088792953
+    second: Player_Bow_Shoot (3)_0
+  - first:
+      213: 6467229771068250175
+    second: Player_Bow_Shoot (3)_1
+  - first:
+      213: 561704154504485102
+    second: Player_Bow_Shoot (3)_2
+  - first:
+      213: 3153852063671792459
+    second: Player_Bow_Shoot (3)_3
+  - first:
+      213: 368219995160598309
+    second: Player_Bow_Shoot (3)_4
+  - first:
+      213: 6832116356881921618
+    second: Player_Bow_Shoot (3)_5
+  - first:
+      213: 4591570491997929649
+    second: Player_Bow_Shoot (3)_6
+  - first:
+      213: -4706732863128971299
+    second: Player_Bow_Shoot (3)_7
+  - first:
+      213: 2850363203106308677
+    second: Player_Bow_Shoot (3)_8
+  - first:
+      213: 4404429178448006612
+    second: Player_Bow_Shoot (3)_9
+  - first:
+      213: -7112810947093255474
+    second: Player_Bow_Shoot (3)_10
+  - first:
+      213: 2603953716734126675
+    second: Player_Bow_Shoot (3)_11
+  - first:
+      213: 631694577844993191
+    second: Player_Bow_Shoot (3)_12
+  - first:
+      213: 1317056276947828789
+    second: Player_Bow_Shoot (3)_13
+  - first:
+      213: 7309472454507196232
+    second: Player_Bow_Shoot (3)_14
+  - first:
+      213: -4627207747914045276
+    second: Player_Bow_Shoot (3)_15
+  - first:
+      213: 1637985251550472318
+    second: Player_Bow_Shoot (3)_16
+  - first:
+      213: 748207185031246481
+    second: Player_Bow_Shoot (3)_17
+  - first:
+      213: -7719042843434533509
+    second: Player_Bow_Shoot (3)_18
+  - first:
+      213: 3455069614077228474
+    second: Player_Bow_Shoot (3)_19
+  - first:
+      213: -3229184840894794413
+    second: Player_Bow_Shoot (3)_20
+  - first:
+      213: -3700186633716211072
+    second: Player_Bow_Shoot (3)_21
+  - first:
+      213: 7018467738150703184
+    second: Player_Bow_Shoot (3)_22
+  - first:
+      213: 4383613592925849546
+    second: Player_Bow_Shoot (3)_23
+  - first:
+      213: 7184511394692289612
+    second: Player_Bow_Shoot (3)_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 28
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 158
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973d8f7575223ae30800000000000000
+      internalID: 4513489010088792953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 158
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f389a51463730c950800000000000000
+      internalID: 6467229771068250175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 158
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8d916d3f29bc700800000000000000
+      internalID: 561704154504485102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 158
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b433a49fdbbb4cb20800000000000000
+      internalID: 3153852063671792459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 158
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5275eba722e2c1500800000000000000
+      internalID: 368219995160598309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2563514e0ad80de50800000000000000
+      internalID: 6832116356881921618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0c3b8090988bf30800000000000000
+      internalID: 4591570491997929649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd75a88f5635eaeb0800000000000000
+      internalID: -4706732863128971299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5420ff93b368e8720800000000000000
+      internalID: 2850363203106308677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_9
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd42cb800daf1d30800000000000000
+      internalID: 4404429178448006612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 82
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca2ffff0283a4d90800000000000000
+      internalID: -7112810947093255474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 82
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aee79eb1a132420800000000000000
+      internalID: 2603953716734126675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 82
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acbdf62fda34c800800000000000000
+      internalID: 631694577844993191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 82
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5308ca0b4bf174210800000000000000
+      internalID: 1317056276947828789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 82
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f676a5876707560800000000000000
+      internalID: 7309472454507196232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8e5abb11bd8cfb0800000000000000
+      internalID: -4627207747914045276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_16
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78aef968ea4bb610800000000000000
+      internalID: 1637985251550472318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192be2a787a226a00800000000000000
+      internalID: 748207185031246481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_18
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d301f5e6370e490800000000000000
+      internalID: -7719042843434533509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_19
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5b15d128fd2ff20800000000000000
+      internalID: 3455069614077228474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355b3640f71af23d0800000000000000
+      internalID: -3229184840894794413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_21
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08262be6cdb46acc0800000000000000
+      internalID: -3700186633716211072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0501300f83b966160800000000000000
+      internalID: 7018467738150703184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac74bee5659b5dc30800000000000000
+      internalID: 4383613592925849546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Bow_Shoot (3)_24
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44516d5c0384b360800000000000000
+      internalID: 7184511394692289612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using UnityCore.Audio;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using AudioType = UnityCore.Audio.AudioType;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] private int playerLives = 3;
     [SerializeField] private int score = 0;
 
-    [SerializeField] private Text livesText;
+    [SerializeField] private Slider healthBar;
     [SerializeField] private Text scoreText;
+
+    private Player player;
     
     // Start is called before the first frame update
     void Awake()
@@ -21,11 +24,15 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
+        player = FindObjectOfType<Player>();
+        
+        AudioController.instance.PlayAudio(AudioType.Overworld_2, true, 1f);
     }
 
     private void Start()
     {
-        livesText.text = playerLives.ToString();
+        healthBar.value = player.GetHealth();
         scoreText.text = score.ToString();
     }
 
@@ -35,24 +42,15 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void ProcessPlayerDeath()
+    public void TakeHealth(int damage)
     {
-        if (playerLives > 1)
-        {
-            TakeLife();
-        }
-        else
-        {
-            ResetGameSession();
-        }
+        healthBar.value -= damage;
     }
 
-    private void TakeLife()
+    public void ProcessPlayerDeath()
     {
-        playerLives--;
-        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
-        livesText.text = playerLives.ToString();
+        Debug.Log("You died");
+        ResetGameSession();
     }
 
     private void ResetGameSession()

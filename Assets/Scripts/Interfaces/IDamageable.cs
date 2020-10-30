@@ -2,7 +2,7 @@
 {
     public interface IDamageable
     {
-        void TakeDame(int damage);
+        void TakeDamage(int damage);
         void TriggerDeath();
     }
 }

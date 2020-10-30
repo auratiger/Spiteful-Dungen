@@ -8,7 +8,7 @@ namespace Projectiles
         [SerializeField] protected float yVelocity;
 
         protected abstract void ImpactSound();
-        protected abstract void HandleImpact();
+        protected abstract void HandleImpact(Collision2D other);
 
     }
 }

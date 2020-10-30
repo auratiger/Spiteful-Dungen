@@ -1,4 +1,5 @@
 ﻿using DefaultNamespace;
+using UnityEditor;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -20,19 +21,24 @@ public class Player : MonoBehaviour, IDamageable
     [Header("Attack")]
     [SerializeField] private GameObject shooter;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private float shootDelay = 0.5f;
 
     [Header("Particles")] 
     [SerializeField] private ParticleSystem footsteps;
+
+    private GameSession m_Session;
     
     private Rigidbody2D myRigidBody;
     private Animator myAnimator;
     private CapsuleCollider2D bodyCollider;
     private BoxCollider2D legsCollider;
     private float gravitySlaceAtStart;
+    private Camera camera;
 
 #region States
 
     // player states
+    private bool m_isAttacking = false;
     private bool m_IsRunning = false;
     private bool m_IsRolling = false;
     private bool m_IsInvulnerable = false;
@@ -41,10 +47,13 @@ public class Player : MonoBehaviour, IDamageable
     private bool m_IsClimbing = false;
     private bool m_IsGrounded = false;
 
+    private float lastShot;
+
     // animation state
     private int m_CurrentState;
 
     private bool m_IsFacingRigth = true;
+    private float m_RotationAngle = 0;
 
 #endregion
 
@@ -64,6 +73,10 @@ public class Player : MonoBehaviour, IDamageable
         myAnimator = GetComponent<Animator>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
         legsCollider = GetComponent<BoxCollider2D>();
+
+        m_Session = FindObjectOfType<GameSession>();
+
+        camera = Camera.main;
 
         footEmission = footsteps.emission;
         emissionBaseValue = footEmission.rateOverTime.constant;
@@ -87,7 +100,6 @@ public class Player : MonoBehaviour, IDamageable
         
         HandleAnimation();
         
-        // TriggerDeath();
     }
     
     private void OnCollisionEnter2D(Collision2D other)
@@ -113,6 +125,11 @@ public class Player : MonoBehaviour, IDamageable
         m_IsRolling = false;
         m_IsInvulnerable = false;
     }
+
+    public void StopAttack()
+    {
+        m_isAttacking = false;
+    }
     
     public void FlipSprite()
     {
@@ -132,12 +149,23 @@ public class Player : MonoBehaviour, IDamageable
     {
         movementSpeed = speed;
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
+
+    public int GetDamage()
+    {
+        return baseDamage;
+    }
     
-    public void TakeDame(int damage)
+    public void TakeDamage(int damage)
     {
         if (!m_IsInvulnerable)
         {
             health -= damage;
+            m_Session.TakeHealth(damage);
         }
 
         if (health <= 0)
@@ -164,8 +192,55 @@ public class Player : MonoBehaviour, IDamageable
         {
             if (!m_IsClimbing && !m_IsRolling)
             {
+                if (Time.time - lastShot < shootDelay) return;
+                
+                Ray mousePosition = camera.ScreenPointToRay(Input.mousePosition);
+                Vector2 playerToMouseVector = mousePosition.origin - transform.position;
+
+                CalculateRotationAngle(playerToMouseVector);
+
+                // Rotate the player to where the mouse is pointing
+                if (playerToMouseVector.x < 0 && m_IsFacingRigth)
+                {
+                    FlipSprite();
+                }
+                else if (playerToMouseVector.x > 0 && !m_IsFacingRigth)
+                {
+                    FlipSprite();
+                }
+                
+                shooter.transform.Rotate(0f, 0f, m_RotationAngle);
+                m_isAttacking = true;
+                lastShot = Time.time;
+                
                 GameObject arrow = Instantiate(projectile, shooter.transform.position, shooter.transform.rotation);
+                
+                shooter.transform.Rotate(0f, 0f, -m_RotationAngle);
             }
+        }
+    }
+
+    private void CalculateRotationAngle(Vector2 playerToMouseVector)
+    {
+        // Debug.Log(transform.position);
+        // Debug.Log(mousePosFromPlayer);
+        // Debug.Log(angle);
+        
+        var angle = Vector2.Angle(new Vector2(playerToMouseVector.x, 0), playerToMouseVector);
+
+        // this restricts the shooting to specific angles,
+        // instead of being able to shoot everywhere  
+        if (angle > 63.4349f)
+        {
+            m_RotationAngle = Mathf.Sign(playerToMouseVector.y) * 90f;
+        }
+        else if (angle > 26.5650f)
+        {
+            m_RotationAngle = Mathf.Sign(playerToMouseVector.y) * 45f;
+        }
+        else
+        {
+            m_RotationAngle = 0;
         }
     }
 
@@ -218,7 +293,31 @@ public class Player : MonoBehaviour, IDamageable
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
 
-        if (m_IsClimbing)
+        if (m_isAttacking)
+        {
+            if (95 > m_RotationAngle && m_RotationAngle > 85)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_BOW_UP);
+            }
+            else if (50 > m_RotationAngle && m_RotationAngle > 40)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_BOW_UPPER_RIGTH);
+            }
+            else if (-50 < m_RotationAngle && m_RotationAngle < -40)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_BOW_LOWER_RIGHT);
+            }
+            else if (-95 < m_RotationAngle && m_RotationAngle < -85)
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_BOW_DOWN);
+            }
+            else
+            {
+                ChangeAnimationState(PlayerAnimations.PLAYER_BOW_RIGTH);
+            }
+            
+        }
+        else if (m_IsClimbing)
         {
             // TODO make it so the player can stand still on the top of the ladder
             
@@ -315,11 +414,11 @@ public class Player : MonoBehaviour, IDamageable
                     Vector2 jumpVelocityToAdd = new Vector2(myRigidBody.velocity.x, jumpSpeed);
                     myRigidBody.velocity = jumpVelocityToAdd;
 
-                    enemy.TakeDame(baseDamage);
+                    enemy.TakeDamage(baseDamage);
                 }
                 else
                 {
-                    TakeDame(enemy.GetDamage());
+                    TakeDamage(enemy.GetDamage());
                 }
             }
         }
