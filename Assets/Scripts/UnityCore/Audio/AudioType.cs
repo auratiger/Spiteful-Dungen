@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityCore
+﻿namespace UnityCore.Audio
 {
-    namespace Audio
+    public enum AudioType
     {
-        public enum AudioType
-        {
-            None,
-            ST_01,
-            ST_02,
-            SFX_01,
-            SFX_02,
-            
-            SFX_CoinPickup
-        }
-    }    
+        None,
+        
+        Menu_track,
+        Overworld_1,
+        Overworld_2,
+        
+        SFX_CoinPickup,
+        SFX_BowShot,
+        SFX_ArrowHit,
+        
+    }
+   
 }
 

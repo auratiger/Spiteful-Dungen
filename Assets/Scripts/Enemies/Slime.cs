@@ -1,5 +1,4 @@
-﻿using System;
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using UnityEngine;
 
 namespace Enemies
@@ -43,9 +42,9 @@ namespace Enemies
             }
         }
 
-        public override void TakeDame(int damage)
+        public override void TakeDame(int _damage)
         {
-            health -= damage;
+            health -= _damage;
 
             if (health <= 0)
             {
@@ -59,7 +58,7 @@ namespace Enemies
             Destroy(gameObject);
         }
 
-        protected void OnTriggerExit2D(Collider2D other)
+        protected void OnTriggerEnter2D(Collider2D other)
         {
             transform.localScale = new Vector2(-(Mathf.Sign(myRigidBody.velocity.x)), 1f);
         }

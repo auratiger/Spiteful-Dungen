@@ -14,7 +14,7 @@ public class LevelExit : MonoBehaviour
 
     private void Awake()
     {
-        _loader = GetComponent<SceneLoader>();
+        _loader = FindObjectOfType<SceneLoader>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

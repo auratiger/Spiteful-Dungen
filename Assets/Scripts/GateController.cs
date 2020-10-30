@@ -1,16 +1,39 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class GateController : MonoBehaviour
 {
     private Animator myAnimator;
+    private Rigidbody2D m_Rigidbody2D;
+    
     private static readonly int Rise = Animator.StringToHash("Rise");
+
+    private bool isOpen = false;
 
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (m_Rigidbody2D.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
+        {
+            if (!isOpen && CrossPlatformInputManager.GetButtonDown(Controls.INTERACT))
+            {
+                OpenGate();
+            }
+
+            if (isOpen && CrossPlatformInputManager.GetButtonDown(Controls.VERTICAL))
+            {
+                FindObjectOfType<SceneLoader>().LoadNextScene();
+            }
+        }
     }
 
     public void OpenGate()

@@ -128,11 +128,17 @@
           <e p="ConstValues" t="Include">
             <e p="Controls.cs" t="Include" />
             <e p="Layers.cs" t="Include" />
-            <e p="PlayerAnimations.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="Slime.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="Dialogs" t="Include">
+              <e p="DialogController.cs" t="Include" />
+              <e p="DialogTrigger.cs" t="Include" />
+              <e p="DialogType.cs" t="Include" />
+            </e>
           </e>
           <e p="GameSession.cs" t="Include" />
           <e p="GateController.cs" t="Include" />
@@ -143,18 +149,32 @@
             <e p="IDamageable.cs" t="Include" />
           </e>
           <e p="LevelExit.cs" t="Include" />
-          <e p="MainScreenPlayerMovements.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
-          <e p="SceneLoader.cs" t="Include" />
-          <e p="ScenePersist.cs" t="Include" />
-          <e p="SettingsController.cs" t="Include" />
-          <e p="SFXPlayer.cs" t="Include" />
-          <e p="StartMenuController.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="MainScreenPlayerMovements.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerAnimations.cs" t="Include" />
+          </e>
+          <e p="Projectiles" t="Include">
+            <e p="Arrow.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+          </e>
+          <e p="TorchFlicker.cs" t="Include" />
           <e p="UnityCore" t="Include">
             <e p="Audio" t="Include">
               <e p="AudioController.cs" t="Include" />
               <e p="AudioType.cs" t="Include" />
-              <e p="TestAudio.cs" t="Include" />
+            </e>
+            <e p="Data" t="Include">
+              <e p="ISaveable.cs" t="Include" />
+            </e>
+            <e p="Menu" t="Include">
+              <e p="MainMenuController.cs" t="Include" />
+            </e>
+            <e p="Scene" t="Include">
+              <e p="SceneLoader.cs" t="Include" />
+            </e>
+            <e p="Settings" t="Include">
+              <e p="SettingsController.cs" t="Include" />
             </e>
           </e>
         </e>

@@ -1,0 +1,659 @@
+fileFormatVersion: 2
+guid: f27d7d2c96ccb694fbbf72f2e144ffd4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -796708922763677343
+    second: oppcastle-mod-tiles_0
+  - first:
+      213: 1480652390449302729
+    second: oppcastle-mod-tiles_1
+  - first:
+      213: 6736382405261115366
+    second: oppcastle-mod-tiles_2
+  - first:
+      213: -6719593980246774358
+    second: oppcastle-mod-tiles_3
+  - first:
+      213: -6462655787054494718
+    second: oppcastle-mod-tiles_4
+  - first:
+      213: -1363039407159452244
+    second: oppcastle-mod-tiles_5
+  - first:
+      213: 2248411495159945837
+    second: oppcastle-mod-tiles_6
+  - first:
+      213: -8516973438151728496
+    second: oppcastle-mod-tiles_7
+  - first:
+      213: 8542418482507819610
+    second: oppcastle-mod-tiles_8
+  - first:
+      213: 6761081214907322752
+    second: oppcastle-mod-tiles_9
+  - first:
+      213: 3322033977397838815
+    second: oppcastle-mod-tiles_10
+  - first:
+      213: 9129359695773219852
+    second: oppcastle-mod-tiles_11
+  - first:
+      213: -2402326963131405033
+    second: oppcastle-mod-tiles_12
+  - first:
+      213: -7438032744998910414
+    second: oppcastle-mod-tiles_13
+  - first:
+      213: 4845222854920542603
+    second: oppcastle-mod-tiles_14
+  - first:
+      213: -8888399963092502117
+    second: oppcastle-mod-tiles_15
+  - first:
+      213: 463975350562866171
+    second: oppcastle-mod-tiles_16
+  - first:
+      213: -6213027704813161
+    second: oppcastle-mod-tiles_17
+  - first:
+      213: 444340024493813340
+    second: oppcastle-mod-tiles_18
+  - first:
+      213: 8939865528050572640
+    second: oppcastle-mod-tiles_19
+  - first:
+      213: 2100617487593712041
+    second: oppcastle-mod-tiles_20
+  - first:
+      213: 9098366048122920729
+    second: oppcastle-mod-tiles_21
+  - first:
+      213: -5611773475559069119
+    second: oppcastle-mod-tiles_22
+  - first:
+      213: 8924281241080324504
+    second: oppcastle-mod-tiles_23
+  - first:
+      213: -7742544599938996860
+    second: oppcastle-mod-tiles_24
+  - first:
+      213: 61927723376322261
+    second: oppcastle-mod-tiles_25
+  - first:
+      213: 1208672955634765692
+    second: oppcastle-mod-tiles_26
+  - first:
+      213: -3821189811550123585
+    second: oppcastle-mod-tiles_27
+  - first:
+      213: 5846843316819769930
+    second: oppcastle-mod-tiles_28
+  - first:
+      213: -5438359965540019181
+    second: oppcastle-mod-tiles_29
+  - first:
+      213: 971056017282125294
+    second: oppcastle-mod-tiles_30
+  - first:
+      213: 5285164343258772744
+    second: oppcastle-mod-tiles_31
+  - first:
+      213: -8459469511779215950
+    second: oppcastle-mod-tiles_32
+  - first:
+      213: -8457743343014834103
+    second: oppcastle-mod-tiles_33
+  - first:
+      213: 2115207584714930843
+    second: oppcastle-mod-tiles_34
+  - first:
+      213: 1445653212558560869
+    second: oppcastle-mod-tiles_35
+  - first:
+      213: 1815917922176344100
+    second: oppcastle-mod-tiles_36
+  - first:
+      213: -7252242638750912669
+    second: oppcastle-mod-tiles_37
+  - first:
+      213: -4704193607692298519
+    second: oppcastle-mod-tiles_38
+  - first:
+      213: 2217449823584934487
+    second: oppcastle-mod-tiles_39
+  - first:
+      213: 6806823282382701073
+    second: oppcastle-mod-tiles_40
+  - first:
+      213: -4840408915071522079
+    second: oppcastle-mod-tiles_41
+  - first:
+      213: 3638782877023182375
+    second: oppcastle-mod-tiles_42
+  - first:
+      213: -3158938962524642318
+    second: oppcastle-mod-tiles_43
+  - first:
+      213: 9170419444053479294
+    second: oppcastle-mod-tiles_44
+  - first:
+      213: -7562777133486196932
+    second: oppcastle-mod-tiles_45
+  - first:
+      213: 6859047235643881547
+    second: oppcastle-mod-tiles_46
+  - first:
+      213: -6884611433761105315
+    second: oppcastle-mod-tiles_47
+  - first:
+      213: -3411650767770202581
+    second: oppcastle-mod-tiles_48
+  - first:
+      213: 1283655161244062093
+    second: oppcastle-mod-tiles_49
+  - first:
+      213: -1620112486867004129
+    second: oppcastle-mod-tiles_50
+  - first:
+      213: 8334255578422729192
+    second: oppcastle-mod-tiles_51
+  - first:
+      213: 3102778331746304339
+    second: oppcastle-mod-tiles_52
+  - first:
+      213: -8863497621418428349
+    second: oppcastle-mod-tiles_53
+  - first:
+      213: 2231368452201674385
+    second: oppcastle-mod-tiles_54
+  - first:
+      213: -6650000665388773773
+    second: oppcastle-mod-tiles_55
+  - first:
+      213: 6014638393012310570
+    second: oppcastle-mod-tiles_56
+  - first:
+      213: 2461382041070764335
+    second: oppcastle-mod-tiles_57
+  - first:
+      213: -2408516083410588800
+    second: oppcastle-mod-tiles_58
+  - first:
+      213: -8128876307198685046
+    second: oppcastle-mod-tiles_59
+  - first:
+      213: -7779558858026931143
+    second: oppcastle-mod-tiles_60
+  - first:
+      213: -1175648856337019865
+    second: oppcastle-mod-tiles_61
+  - first:
+      213: -1205673967305882027
+    second: oppcastle-mod-tiles_62
+  - first:
+      213: -4036014004339010
+    second: oppcastle-mod-tiles_63
+  - first:
+      213: 8238704154905887955
+    second: oppcastle-mod-tiles_64
+  - first:
+      213: -8919670494858594202
+    second: oppcastle-mod-tiles_65
+  - first:
+      213: -6974244680735309459
+    second: oppcastle-mod-tiles_66
+  - first:
+      213: 8146512085664578078
+    second: oppcastle-mod-tiles_67
+  - first:
+      213: 5417290006730054490
+    second: oppcastle-mod-tiles_68
+  - first:
+      213: -3599840115034139236
+    second: oppcastle-mod-tiles_69
+  - first:
+      213: 6667936585649768431
+    second: oppcastle-mod-tiles_70
+  - first:
+      213: 6587818514739024603
+    second: oppcastle-mod-tiles_71
+  - first:
+      213: 6155317825065333070
+    second: oppcastle-mod-tiles_72
+  - first:
+      213: 1939434008024726301
+    second: oppcastle-mod-tiles_73
+  - first:
+      213: -7735197908478691179
+    second: oppcastle-mod-tiles_74
+  - first:
+      213: -2494033501257814376
+    second: oppcastle-mod-tiles_75
+  - first:
+      213: -4039755671562750148
+    second: oppcastle-mod-tiles_76
+  - first:
+      213: -4659846619329090804
+    second: oppcastle-mod-tiles_77
+  - first:
+      213: -5847058150643389843
+    second: oppcastle-mod-tiles_78
+  - first:
+      213: -7640842053853309384
+    second: oppcastle-mod-tiles_79
+  - first:
+      213: -4946558304552083300
+    second: oppcastle-mod-tiles_80
+  - first:
+      213: -1687656419853893812
+    second: oppcastle-mod-tiles_81
+  - first:
+      213: 3567525282427944882
+    second: oppcastle-mod-tiles_82
+  - first:
+      213: 8042279420861428495
+    second: oppcastle-mod-tiles_83
+  - first:
+      213: 6441972144767405446
+    second: oppcastle-mod-tiles_84
+  - first:
+      213: 4888734474918009579
+    second: oppcastle-mod-tiles_85
+  - first:
+      213: -4408705759509839723
+    second: oppcastle-mod-tiles_86
+  - first:
+      213: -5788202976790991275
+    second: oppcastle-mod-tiles_0
+  - first:
+      213: -7142180277961341253
+    second: oppcastle-mod-tiles_1
+  - first:
+      213: 8434147856817896587
+    second: oppcastle-mod-tiles_2
+  - first:
+      213: -6229599890280362138
+    second: oppcastle-mod-tiles_3
+  - first:
+      213: 8107517186306487974
+    second: oppcastle-mod-tiles_4
+  - first:
+      213: 2178572483962735511
+    second: oppcastle-mod-tiles_5
+  - first:
+      213: 8980085673597822044
+    second: oppcastle-mod-tiles_6
+  - first:
+      213: -833714616337182806
+    second: oppcastle-mod-tiles_7
+  - first:
+      213: 6794100638818103234
+    second: oppcastle-mod-tiles_8
+  - first:
+      213: 4109394323570213276
+    second: oppcastle-mod-tiles_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ea3805f0c2cafa0800000000000000
+      internalID: -5788202976790991275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 224
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6405ac0e0e1ec90800000000000000
+      internalID: -7142180277961341253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 303
+        width: 96
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8cb0cc2acc1c0570800000000000000
+      internalID: 8434147856817896587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 257
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fc607d7e30c89a0800000000000000
+      internalID: -6229599890280362138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 271
+        width: 64
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a63c2cecefa38070800000000000000
+      internalID: 8107517186306487974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 244
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b0a00b128db3e10800000000000000
+      internalID: 2178572483962735511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 226
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c546f53775caf9c70800000000000000
+      internalID: 8980085673597822044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 180
+        width: 128
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafcb2149fc0e64f0800000000000000
+      internalID: -833714616337182806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfe109c88e794e50800000000000000
+      internalID: 6794100638818103234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91c8626d50870930800000000000000
+      internalID: 4109394323570213276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd383923d4c3a1e20800000000000000
+      internalID: 3322033977397838815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oppcastle-mod-tiles_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cb45d164002be70800000000000000
+      internalID: 9129359695773219852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

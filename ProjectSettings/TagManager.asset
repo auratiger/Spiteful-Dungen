@@ -22,7 +22,7 @@ TagManager:
   - Hazards
   - Interactables
   - Movables
-  - 
+  - Projectiles
   - 
   - 
   - 
@@ -57,11 +57,14 @@ TagManager:
   - name: Movables
     uniqueID: 1727648985
     locked: 0
+  - name: Foreground
+    uniqueID: 1136793933
+    locked: 0
   - name: Player
     uniqueID: 3357766741
     locked: 0
-  - name: Foreground
-    uniqueID: 1136793933
+  - name: Projectiles
+    uniqueID: 1520217579
     locked: 0
   - name: Interactables
     uniqueID: 2602062837
