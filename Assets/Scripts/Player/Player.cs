@@ -1,13 +1,16 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
+using UnityCore.Data;
 using UnityEditor;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour, IDamageable, ISavable
 {
     [Header("Player stats")]
     [SerializeField] protected int health = 100;
     [SerializeField] protected int baseDamage = 5;
+    [SerializeField] private float invulnerabilityTime = 0.5f;
     
     [Header("Movement")]
     [SerializeField] protected float movementSpeed = 5f;
@@ -34,6 +37,13 @@ public class Player : MonoBehaviour, IDamageable
     private BoxCollider2D legsCollider;
     private float gravitySlaceAtStart;
     private Camera camera;
+    
+    [Serializable]
+    private struct SaveData
+    {
+        public float[] position;
+        public int health;
+    }
 
 #region States
 
@@ -48,12 +58,14 @@ public class Player : MonoBehaviour, IDamageable
     private bool m_IsGrounded = false;
 
     private float lastShot;
-
-    // animation state
-    private int m_CurrentState;
+    private float lastInvulnerable;
 
     private bool m_IsFacingRigth = true;
     private float m_RotationAngle = 0;
+    
+    // animation state
+    private int m_CurrentState;
+
 
 #endregion
 
@@ -89,7 +101,7 @@ public class Player : MonoBehaviour, IDamageable
     {
         if (!m_IsAlive) return;
 
-        m_IsGrounded = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Ground));
+        m_IsGrounded = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Ground, Layers.Platforms));
         m_IsClimbing = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Climbing));
 
         Shoot();
@@ -162,10 +174,18 @@ public class Player : MonoBehaviour, IDamageable
     
     public void TakeDamage(int damage)
     {
+        if (Time.time - lastInvulnerable > invulnerabilityTime)
+        {
+            m_IsInvulnerable = false;
+        }
+        
         if (!m_IsInvulnerable)
         {
             health -= damage;
-            m_Session.TakeHealth(damage);
+            m_Session.SetHealth(health);
+
+            m_IsInvulnerable = true;
+            lastInvulnerable = Time.time;
         }
 
         if (health <= 0)
@@ -179,7 +199,25 @@ public class Player : MonoBehaviour, IDamageable
         m_IsAlive = false;
         ChangeAnimationState(PlayerAnimations.PLAYER_DIE);
         myRigidBody.velocity = deathKick;
-        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        m_Session.ProcessPlayerDeath();
+    }
+    
+    public object CaptureState()
+    {
+        return new SaveData()
+        {
+            position = new [] {transform.position.x, transform.position.y},
+            health = health
+        };
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = (SaveData) state;
+
+        transform.position = new Vector2(saveData.position[0], saveData.position[1]);
+        health = saveData.health;
+        m_Session.SetHealth(health);
     }
 
 #endregion
@@ -370,6 +408,7 @@ public class Player : MonoBehaviour, IDamageable
         {
             m_IsRolling = true;
             m_IsInvulnerable = true;
+            lastInvulnerable = Time.time;
         }
     }
 
@@ -425,5 +464,4 @@ public class Player : MonoBehaviour, IDamageable
     }
     
 #endregion
-
 }

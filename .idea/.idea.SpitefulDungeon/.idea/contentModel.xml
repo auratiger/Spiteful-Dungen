@@ -141,9 +141,10 @@
             </e>
           </e>
           <e p="GameSession.cs" t="Include" />
-          <e p="GateController.cs" t="Include" />
           <e p="Interactables" t="Include">
             <e p="Coin.cs" t="Include" />
+            <e p="GateController.cs" t="Include" />
+            <e p="VerticalPlatform.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="IDamageable.cs" t="Include" />
@@ -165,7 +166,9 @@
               <e p="AudioType.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
-              <e p="ISaveable.cs" t="Include" />
+              <e p="DataController.cs" t="Include" />
+              <e p="ISavable.cs" t="Include" />
+              <e p="SavableEntity.cs" t="Include" />
             </e>
             <e p="Menu" t="Include">
               <e p="MainMenuController.cs" t="Include" />

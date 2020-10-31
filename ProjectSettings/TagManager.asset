@@ -23,7 +23,7 @@ TagManager:
   - Interactables
   - Movables
   - Projectiles
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -48,9 +48,6 @@ TagManager:
   - name: Climbing
     uniqueID: 673512699
     locked: 0
-  - name: Enemy
-    uniqueID: 3420166981
-    locked: 0
   - name: Hazards
     uniqueID: 1213105983
     locked: 0
@@ -60,8 +57,14 @@ TagManager:
   - name: Foreground
     uniqueID: 1136793933
     locked: 0
+  - name: Enemy
+    uniqueID: 3420166981
+    locked: 0
   - name: Player
     uniqueID: 3357766741
+    locked: 0
+  - name: Platforms
+    uniqueID: 1605984499
     locked: 0
   - name: Projectiles
     uniqueID: 1520217579

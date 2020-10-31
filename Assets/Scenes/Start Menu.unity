@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 338113172}
   - component: {fileID: 338113171}
   - component: {fileID: 338113170}
+  - component: {fileID: 338113173}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -461,7 +462,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -534,6 +535,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338113168}
   m_CullTransparentMesh: 0
+--- !u!95 &338113173
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338113168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af715e0367dae5e4d82c171a0c502c89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &715428366
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +689,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1213105983
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -824,7 +844,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1727648985
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bf692317680efac469f7a193a5a33fa4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1112,6 +1132,7 @@ GameObject:
   - component: {fileID: 1178502481}
   - component: {fileID: 1178502480}
   - component: {fileID: 1178502479}
+  - component: {fileID: 1178502482}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -1157,7 +1178,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1230,6 +1251,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178502477}
   m_CullTransparentMesh: 0
+--- !u!95 &1178502482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178502477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af715e0367dae5e4d82c171a0c502c89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1376422528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1362,7 @@ GameObject:
   - component: {fileID: 1542772458}
   - component: {fileID: 1542772457}
   - component: {fileID: 1542772456}
+  - component: {fileID: 1542772459}
   m_Layer: 5
   m_Name: Start Butoon
   m_TagString: Untagged
@@ -1367,7 +1408,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1440,6 +1481,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542772454}
   m_CullTransparentMesh: 0
+--- !u!95 &1542772459
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542772454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af715e0367dae5e4d82c171a0c502c89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1771148719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1572,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1136793933
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
@@ -13471,12 +13531,12 @@ PrefabInstance:
     - target: {fileID: 8780638308674220431, guid: 163d011a5015a8b44b39bb3820b08821,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8366966
+      value: -2.029131
       objectReference: {fileID: 0}
     - target: {fileID: 8780638308674220431, guid: 163d011a5015a8b44b39bb3820b08821,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.752622
+      value: -4.722819
       objectReference: {fileID: 0}
     - target: {fileID: 8780638309694911862, guid: 163d011a5015a8b44b39bb3820b08821,
         type: 3}

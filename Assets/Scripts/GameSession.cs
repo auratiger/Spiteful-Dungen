@@ -42,9 +42,9 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void TakeHealth(int damage)
+    public void SetHealth(int health)
     {
-        healthBar.value -= damage;
+        healthBar.value = health;
     }
 
     public void ProcessPlayerDeath()
@@ -55,7 +55,8 @@ public class GameSession : MonoBehaviour
 
     private void ResetGameSession()
     {
-        SceneManager.LoadScene(0);
+        AudioController.instance.StopAudio(AudioType.Overworld_2);
+        FindObjectOfType<SceneLoader>().LoadStartMenu();
         Destroy(gameObject);
     }
 }

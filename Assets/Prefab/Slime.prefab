@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1749624452949154582}
   - component: {fileID: 2355500527310415008}
   - component: {fileID: 4974066989516683059}
+  - component: {fileID: 7426030788600450809}
   m_Layer: 12
   m_Name: Slime
   m_TagString: Untagged
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -874800315
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -570807933488141205, guid: 08ed5f8899e8fd246af902888244142f,
     type: 3}
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.5, y: -0.17559874}
@@ -201,3 +202,16 @@ MonoBehaviour:
   moveSpeed: 2
   health: 50
   damage: 20
+--- !u!114 &7426030788600450809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749624452949154575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8b96b0b5acd84d9950230610773e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6a0641e2-8c42-4240-9e88-48cd347ea8be
