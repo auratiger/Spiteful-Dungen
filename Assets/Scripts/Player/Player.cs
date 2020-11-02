@@ -132,10 +132,26 @@ public class Player : MonoBehaviour, IDamageable, ISavable
 
 #region Public Functions
 
+    public void StartRoll()
+    {
+        m_IsRolling = true;
+        m_IsInvulnerable = true;
+        
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer(Layers.Enemy), 
+            LayerMask.NameToLayer(Layers.Player),
+            true);
+    }
+    
     public void StopRoll()
     {
         m_IsRolling = false;
         m_IsInvulnerable = false;
+        
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer(Layers.Enemy), 
+            LayerMask.NameToLayer(Layers.Player),
+            false);
     }
 
     public void StopAttack()
@@ -406,8 +422,7 @@ public class Player : MonoBehaviour, IDamageable, ISavable
         
         if (CrossPlatformInputManager.GetButtonDown(Controls.FIRE2))
         {
-            m_IsRolling = true;
-            m_IsInvulnerable = true;
+            StartRoll();
             lastInvulnerable = Time.time;
         }
     }

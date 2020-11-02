@@ -20,20 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7788976b-d2b6-4b51-b05d-4417322326b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Main Menu Button.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buttons/Main Menu Button.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Settings Button.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buttons/Settings Button.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player AutoWalk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player AutoWalk.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +78,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/SaveableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/SavableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactables/VerticalPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" />
@@ -101,8 +88,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
       </list>
     </option>
   </component>
@@ -162,7 +150,8 @@
       <workItem from="1604086342660" duration="4033000" />
       <workItem from="1604154822904" duration="6291000" />
       <workItem from="1604312354442" duration="482000" />
-      <workItem from="1604312882620" duration="13549000" />
+      <workItem from="1604312882620" duration="14958000" />
+      <workItem from="1604344570097" duration="1123000" />
     </task>
     <servers />
   </component>
@@ -195,9 +184,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="434" y="176" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604313098020" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604155035918">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604344619336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604155035918" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604344619336" />
   </component>
 </project>
