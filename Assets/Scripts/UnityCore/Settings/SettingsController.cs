@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -9,18 +9,61 @@ namespace UnityCore.Settings
 {
     public class SettingsController : MonoBehaviour
     {
+        [Tooltip("Activate debugging messages")]
+        [SerializeField] public bool debug;
+        
+        [Header("Settings buttons")]
         [SerializeField] private AudioMixer audioMixer;
         [SerializeField] private Dropdown resolutionDropdown;
 
+        [Space]
+        [Header("Panels")]
+        [SerializeField] private SettingsPanel[] panels;
+        
         private Resolution[] resolutions;
+        private Dictionary<SettingsType, GameObject> panelTable;
+        private GameObject currentPanel;
+
+        [Serializable]
+        private struct SettingsPanel
+        {
+            public SettingsType type;
+            public GameObject panelInstance;
+        }
 
 #region Unity Functions
 
         private void Start()
         {
+            Configure();
             ManageResolutions();
         }
 
+
+#endregion
+
+#region OnClick Functions
+
+        public void OpenPanel(int type)
+        {
+            SettingsType settingsType = (SettingsType) type;
+
+            if(!panelTable.ContainsKey(settingsType))
+            {
+                LogWarning("You are trying to open panel [" + settingsType + "] which is not present in table");
+                return;
+            }
+            
+            GameObject panel = panelTable[settingsType];
+
+            if (currentPanel != null)
+            {
+                currentPanel.SetActive(false);
+            }
+
+            currentPanel = panel;
+            panel.SetActive(true);
+        }
 
 #endregion
 
@@ -83,6 +126,43 @@ namespace UnityCore.Settings
         }
 
         
+#endregion
+
+#region Private Functions
+
+        private void Configure()
+        {
+            panelTable = new Dictionary<SettingsType, GameObject>();
+            GeneratePanelTable();
+        }
+
+        private void GeneratePanelTable()
+        {
+            foreach (SettingsPanel panel in panels)
+            {
+                if (panelTable.ContainsKey(panel.type))
+                {
+                    LogWarning("You are trying to register audio [" + panel.type + "] that has already been registered");
+                }
+                else
+                {
+                    panelTable.Add(panel.type, panel.panelInstance);
+                }
+            }
+        }
+        
+        private void Log(object _msg)
+        {
+            if (!debug) return;
+            Debug.Log("[Audio Controller]: " + _msg);
+        }
+
+        private void LogWarning(object _msg)
+        {
+            if (!debug) return;
+            Debug.LogWarning("[Audio Controller]: " + _msg);
+        }
+
 #endregion
     
     }

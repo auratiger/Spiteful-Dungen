@@ -23,25 +23,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Button.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Button.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Main Menu Button.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buttons/Main Menu Button.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Buttons/Settings Button.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Buttons/Settings Button.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player AutoWalk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player AutoWalk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConstValues/Layers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConstValues/Layers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Slime.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GateController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/ISaveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/ISavable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/ISaveable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/ISavable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Menu/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Menu/MainMenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites &amp; Tiles/Tiles/Manual Tiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites &amp; Tiles/Tiles/Manual Tiles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainScreenPlayerMovements.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Layers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Damageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
@@ -78,8 +66,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StartMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Menu/MainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Dialogs/DialogType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Dialogs/DialogController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Dialogs/DialogTrigger.cs" />
@@ -111,6 +97,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Slime.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Data/DataController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneTypes.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Settings/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Audio/AudioController.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +116,8 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -168,6 +161,8 @@
       <workItem from="1604058450491" duration="13717000" />
       <workItem from="1604086342660" duration="4033000" />
       <workItem from="1604154822904" duration="6291000" />
+      <workItem from="1604312354442" duration="482000" />
+      <workItem from="1604312882620" duration="13549000" />
     </task>
     <servers />
   </component>
@@ -196,10 +191,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604159918173" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1603726378270">
+    <state x="434" y="176" key="SettingsEditor" timestamp="1604313098020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603726378270" />
+    <state x="434" y="176" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604313098020" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604155035918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

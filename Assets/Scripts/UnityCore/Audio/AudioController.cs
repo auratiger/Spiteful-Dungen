@@ -4,27 +4,29 @@ using UnityEngine;
 
 namespace UnityCore.Audio
 {
-
     public class AudioController : MonoBehaviour
     {
 
         public static AudioController instance;
 
-        public bool debug;
-        public AudioTrack[] tracks;
+        [Tooltip("Activate debugging messages")]
+        [SerializeField] public bool debug;
+        
+        [Space]
+        [SerializeField] private AudioTrack[] tracks;
 
         private Hashtable m_AudioTable; // relationship between audio types (key) and audio tracks (value)
         private Hashtable m_JobTable; // relationship between audio types (key) and jobs (value) (Coroutine, IEnumerator)
 
         [Serializable]
-        public struct AudioObject
+        private struct AudioObject
         {
             public AudioType type;
             public AudioClip clip;
         }
 
         [Serializable]
-        public struct AudioTrack
+        private struct AudioTrack
         {
             public AudioSource source;
             public AudioObject[] audio;
@@ -60,6 +62,10 @@ namespace UnityCore.Audio
             if (!instance)
             {
                 Configure();
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
 
@@ -105,6 +111,8 @@ namespace UnityCore.Audio
 
         private void Dispose()
         {
+            if (m_JobTable == null) return;
+            
             foreach (DictionaryEntry _entry in m_JobTable)
             {
                 IEnumerator _job = (IEnumerator) _entry.Value;

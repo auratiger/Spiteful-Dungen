@@ -1,4 +1,5 @@
 ﻿using DefaultNamespace;
+using UnityCore.Scene;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
