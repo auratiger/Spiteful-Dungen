@@ -24,8 +24,8 @@ TagManager:
   - Movables
   - Projectiles
   - Platforms
-  - 
-  - 
+  - MiddleGround
+  - SolidPlatform
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1602561183
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 1042015259
     locked: 0
   - name: Climbing
     uniqueID: 673512699
@@ -71,4 +74,7 @@ TagManager:
     locked: 0
   - name: Interactables
     uniqueID: 2602062837
+    locked: 0
+  - name: SolidPlatform
+    uniqueID: 2890310469
     locked: 0

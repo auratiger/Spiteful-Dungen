@@ -63,6 +63,9 @@ public class Player : MonoBehaviour, IDamageable, ISavable
     private bool m_IsFacingRigth = true;
     private float m_RotationAngle = 0;
     
+    private float _decelerationTolerance = 35.0f;
+    public Vector2 velocity;
+
     // animation state
     private int m_CurrentState;
 
@@ -101,7 +104,7 @@ public class Player : MonoBehaviour, IDamageable, ISavable
     {
         if (!m_IsAlive) return;
 
-        m_IsGrounded = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Ground, Layers.Platforms));
+        m_IsGrounded = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Ground, Layers.Platforms, Layers.SolidPlatform));
         m_IsClimbing = legsCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Climbing));
 
         Shoot();
@@ -109,6 +112,7 @@ public class Player : MonoBehaviour, IDamageable, ISavable
         Jump();
         Roll();
         ClimbLadder();
+        FallDamage();
         
         HandleAnimation();
         
@@ -131,17 +135,6 @@ public class Player : MonoBehaviour, IDamageable, ISavable
 #endregion
 
 #region Public Functions
-
-    public void StartRoll()
-    {
-        m_IsRolling = true;
-        m_IsInvulnerable = true;
-        
-        Physics2D.IgnoreLayerCollision(
-            LayerMask.NameToLayer(Layers.Enemy), 
-            LayerMask.NameToLayer(Layers.Player),
-            true);
-    }
     
     public void StopRoll()
     {
@@ -298,6 +291,15 @@ public class Player : MonoBehaviour, IDamageable, ISavable
         }
     }
 
+    private void FallDamage()
+    {
+        if (!(Vector3.Distance(myRigidBody.velocity, velocity) < _decelerationTolerance))
+        {
+            TakeDamage((int)Mathf.Abs(velocity.y * 0.6f));
+        }
+        velocity = myRigidBody.velocity;
+    }
+
     private void Move()
     {
         float controlThrow = CrossPlatformInputManager.GetAxis(Controls.HORIZONTAL);
@@ -427,6 +429,16 @@ public class Player : MonoBehaviour, IDamageable, ISavable
         }
     }
 
+    private void StartRoll()
+    {
+        m_IsRolling = true;
+        m_IsInvulnerable = true;
+        
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer(Layers.Enemy), 
+            LayerMask.NameToLayer(Layers.Player),
+            true);
+    }
 
     private void ClimbLadder()
     {

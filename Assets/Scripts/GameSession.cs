@@ -1,4 +1,5 @@
-﻿using UnityCore.Audio;
+﻿using Interactables;
+using UnityCore.Audio;
 using UnityCore.Scene;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] private Slider healthBar;
     [SerializeField] private Text scoreText;
+    [SerializeField] private SourceRock[] SourceRocks;
 
     private Player player;
     

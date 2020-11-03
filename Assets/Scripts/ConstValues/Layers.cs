@@ -9,5 +9,7 @@
         public const string Player = "Player";
         public const string Hazards = "Hazards";
         public const string Platforms = "Platforms";
+        public const string SolidPlatform = "SolidPlatform";
+        public const string Projectiles = "Projectiles";
     }
 }

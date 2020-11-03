@@ -140,11 +140,13 @@
               <e p="DialogTrigger.cs" t="Include" />
               <e p="DialogType.cs" t="Include" />
             </e>
+            <e p="TorchFlicker.cs" t="Include" />
           </e>
           <e p="GameSession.cs" t="Include" />
           <e p="Interactables" t="Include">
             <e p="Coin.cs" t="Include" />
             <e p="GateController.cs" t="Include" />
+            <e p="SourceRock.cs" t="Include" />
             <e p="VerticalPlatform.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
@@ -160,7 +162,6 @@
             <e p="Arrow.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
-          <e p="TorchFlicker.cs" t="Include" />
           <e p="UnityCore" t="Include">
             <e p="Audio" t="Include">
               <e p="AudioController.cs" t="Include" />

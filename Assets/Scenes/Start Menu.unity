@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13274,62 +13274,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: debug
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[0].type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[0].name
-      value: Settings Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[1].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[1].name
-      value: Start Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[2].type
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[2].name
-      value: Tutorial Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[3].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: scenes.Array.data[3].name
-      value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8290786765746402926, guid: 1068fc38fd6178e4ebd022fb6a834005,
-        type: 3}
-      propertyPath: loadingScreenPrefab
-      value: 
-      objectReference: {fileID: 3835764573229998009, guid: 27252f5512ac5b2458d5a81572c29da2,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1068fc38fd6178e4ebd022fb6a834005, type: 3}
 --- !u!114 &3287263978377469006 stripped

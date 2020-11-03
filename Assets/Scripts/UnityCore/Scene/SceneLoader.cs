@@ -62,7 +62,6 @@ namespace UnityCore.Scene
             SceneManager.LoadScene("Settings Menu");
         }
 
-        
         public void Quit()
         {
             Application.Quit();

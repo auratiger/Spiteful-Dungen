@@ -24,19 +24,10 @@ namespace Interactables
 
         private void Update()
         {
-            if (m_Rigidbody2D.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
-            {
-                if (!isOpen && CrossPlatformInputManager.GetButtonDown(Controls.INTERACT))
-                {
-                    OpenGate();
-                }
-
-                if (isOpen && CrossPlatformInputManager.GetButtonDown(Controls.VERTICAL))
-                {
-                    FindObjectOfType<SceneLoader>().LoadNextScene();
-                }
-            }
+            PlayerEnter();
         }
+
+
 
 #endregion
 
@@ -45,13 +36,28 @@ namespace Interactables
         public void OpenGate()
         {
             myAnimator.SetBool(Rise, true);
+            isOpen = true;
         }
 
         public void CloseGate()
         {
             myAnimator.SetBool(Rise, false);
         }
+        
+#endregion
 
+#region Private Functions
+
+        private void PlayerEnter()
+        {
+            if (m_Rigidbody2D.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
+            {
+                if (isOpen && CrossPlatformInputManager.GetAxis(Controls.VERTICAL) > 0.1)
+                {
+                    FindObjectOfType<SceneLoader>().LoadNextScene();
+                }
+            }
+        }
 
 #endregion
 
