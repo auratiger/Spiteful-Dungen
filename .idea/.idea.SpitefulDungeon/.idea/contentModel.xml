@@ -157,6 +157,8 @@
             <e p="MainScreenPlayerMovements.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="PlayerAnimations.cs" t="Include" />
+            <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">
             <e p="Arrow.cs" t="Include" />

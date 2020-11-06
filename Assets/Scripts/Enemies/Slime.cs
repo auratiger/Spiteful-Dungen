@@ -84,7 +84,7 @@ namespace Enemies
         {
             if (_bodyCollider.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
             {
-                FindObjectOfType<Player>().TakeDamage(damage);
+                FindObjectOfType<Player.Player>().TakeDamage(damage);
             }
         }
         

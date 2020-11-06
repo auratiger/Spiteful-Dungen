@@ -22,26 +22,12 @@
     <list default="true" id="7788976b-d2b6-4b51-b05d-4417322326b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpitefulDungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Game Mixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Game Mixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Rigth.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Rigth.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Up.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Foreground/Source Rock Up.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Foreground/Torch.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Foreground/Torch.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Slime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/GateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/SourceRock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/SourceRock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/PassableExit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/PassableExit.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites &amp; Tiles/Materials/Platform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites &amp; Tiles/Materials/Platform.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Arrow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/TestAudio.cs" />
@@ -74,7 +59,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Dialogs/DialogController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Dialogs/DialogTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Menu/MainScreenPlayerMovements.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MainScreenPlayerMovements.cs" />
@@ -85,7 +69,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TorchFlicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/VerticalPlatform.cs" />
@@ -111,6 +94,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactables/SourceRock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityCore/Scene/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactables/PassableExit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
       </list>
     </option>
@@ -183,7 +169,7 @@
       <workItem from="1604344570097" duration="4107000" />
       <workItem from="1604401287142" duration="12432000" />
       <workItem from="1604483775512" duration="4848000" />
-      <workItem from="1604657050486" duration="879000" />
+      <workItem from="1604657050486" duration="5124000" />
     </task>
     <servers />
   </component>

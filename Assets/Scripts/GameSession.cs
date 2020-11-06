@@ -14,7 +14,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private SourceRock[] SourceRocks;
 
-    private Player player;
+    private Player.Player player;
     
     // Start is called before the first frame update
     void Awake()
@@ -28,7 +28,7 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<Player.Player>();
         
         AudioController.instance.PlayAudio(AudioType.Overworld_2, true, 1f);
     }

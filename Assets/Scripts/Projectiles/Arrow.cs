@@ -18,7 +18,7 @@ namespace Projectiles
         private void Awake()
         {
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            damage = FindObjectOfType<Player>().GetDamage() + baseDamage;
+            damage = FindObjectOfType<Player.Player>().GetDamage() + baseDamage;
         }
 
         private void Start()
