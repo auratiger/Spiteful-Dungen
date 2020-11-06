@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7023420551179985162}
   - component: {fileID: 7727059394483007611}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,8 @@ GameObject:
   - component: {fileID: 548694874040155761}
   - component: {fileID: 6544132081381264255}
   - component: {fileID: 4926762818223312994}
-  m_Layer: 0
+  - component: {fileID: 106107138411151663}
+  m_Layer: 19
   m_Name: Source Rock Rigth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +125,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,8 +143,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1692904459
-  m_SortingLayer: 11
+  m_SortingLayerID: -1404656827
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 8547646277591293808, guid: 852a2760a91341a4d9852b3c8554e2fa,
     type: 3}
@@ -195,7 +196,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.1428572, y: 1.1428572}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -217,3 +218,18 @@ PolygonCollider2D:
       - {x: 0.5, y: 0.40625}
       - {x: 0.4375, y: 0.46875}
       - {x: 0.375, y: 0.5}
+--- !u!114 &106107138411151663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6437207076036795237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2210e1e41cb7b564296f080b35d73c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDirection: 2
+  waypoints: []
+  speed: 3

@@ -405,7 +405,7 @@ public class Player : MonoBehaviour, IDamageable, ISavable
     private void Jump()
     {
         // if(!m_IsGrounded) return;
-        
+
         if (CrossPlatformInputManager.GetButtonDown(Controls.JUMP) && m_IsGrounded)
         {
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8433788574510159388}
   - component: {fileID: 1151410590206755654}
   - component: {fileID: 8105570972254859327}
-  m_Layer: 0
+  - component: {fileID: -8998753323568464889}
+  m_Layer: 19
   m_Name: Source Rock Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1692904459
-  m_SortingLayer: 11
+  m_SortingLayerID: -1404656827
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 5737115057925998576, guid: 852a2760a91341a4d9852b3c8554e2fa,
     type: 3}
@@ -123,7 +124,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.1428572, y: 1.1428572}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,6 +148,21 @@ PolygonCollider2D:
       - {x: 0.5, y: 0.25}
       - {x: 0.46875, y: 0.4375}
       - {x: 0.40625, y: 0.5}
+--- !u!114 &-8998753323568464889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461992624610486873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2210e1e41cb7b564296f080b35d73c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDirection: 0
+  waypoints: []
+  speed: 3
 --- !u!1 &8996240647897305690
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557407568265111914}
   - component: {fileID: 4041586428119111595}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

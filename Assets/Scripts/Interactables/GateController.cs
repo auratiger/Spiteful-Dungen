@@ -7,6 +7,8 @@ namespace Interactables
 {
     public class GateController : MonoBehaviour
     {
+        [SerializeField] private bool passable;
+        
         private Animator myAnimator;
         private Rigidbody2D m_Rigidbody2D;
     
@@ -24,10 +26,12 @@ namespace Interactables
 
         private void Update()
         {
-            PlayerEnter();
+            if (passable)
+            {
+                PlayerEnter();
+            }
         }
-
-
+        
 
 #endregion
 
@@ -42,6 +46,11 @@ namespace Interactables
         public void CloseGate()
         {
             myAnimator.SetBool(Rise, false);
+        }
+
+        public bool isPassable()
+        {
+            return passable;
         }
         
 #endregion

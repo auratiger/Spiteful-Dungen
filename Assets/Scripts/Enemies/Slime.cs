@@ -32,7 +32,7 @@ namespace Enemies
             Move();
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             transform.localScale = new Vector2(-(Mathf.Sign(myRigidBody.velocity.x)), 1f);
         }

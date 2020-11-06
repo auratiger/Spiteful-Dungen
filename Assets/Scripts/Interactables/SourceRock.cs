@@ -102,7 +102,13 @@ namespace Interactables
 
             if (allActive)
             {
-                FindObjectOfType<GateController>().OpenGate();
+                foreach (var gate in FindObjectsOfType<GateController>())
+                {
+                    if (gate.isPassable())
+                    {
+                        gate.OpenGate();
+                    }
+                }
             }
         }
 

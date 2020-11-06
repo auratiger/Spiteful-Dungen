@@ -20,11 +20,11 @@ namespace UnityCore.Scene
         private Text progressText;
         
 #region Unity Functions
-
-        private void Awake()
-        {
-            Singleton();
-        }
+        //
+        // private void Awake()
+        // {
+        //     Singleton();
+        // }
         
 #endregion
 
@@ -71,19 +71,7 @@ namespace UnityCore.Scene
 
 #region Private Functions
 
-        private void Singleton()
-        {
-            if (FindObjectsOfType<SceneLoader>().Length > 1)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-        }
-
-        IEnumerator LoadAsynchronously(string sceneName)
+        private IEnumerator LoadAsynchronously(string sceneName)
         {
             CreateLoadScreen();
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
@@ -97,7 +85,7 @@ namespace UnityCore.Scene
                 yield return null;
             }
         }
-        IEnumerator LoadAsynchronously(int sceneIndex)
+        private IEnumerator LoadAsynchronously(int sceneIndex)
         {
             CreateLoadScreen();
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);

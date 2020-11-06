@@ -146,13 +146,13 @@
           <e p="Interactables" t="Include">
             <e p="Coin.cs" t="Include" />
             <e p="GateController.cs" t="Include" />
+            <e p="PassableExit.cs" t="Include" />
             <e p="SourceRock.cs" t="Include" />
             <e p="VerticalPlatform.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
             <e p="IDamageable.cs" t="Include" />
           </e>
-          <e p="LevelExit.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="MainScreenPlayerMovements.cs" t="Include" />
             <e p="Player.cs" t="Include" />
