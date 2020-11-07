@@ -1,9 +1,9 @@
-﻿using Interactables;
+﻿using DefaultNamespace;
 using UnityCore.Audio;
 using UnityCore.Scene;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 using AudioType = UnityCore.Audio.AudioType;
 
 public class GameSession : MonoBehaviour
@@ -12,11 +12,15 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] private Slider healthBar;
     [SerializeField] private Text scoreText;
-    [SerializeField] private SourceRock[] SourceRocks;
-
+    [SerializeField] private GameObject gameMenu;
+    [SerializeField] private GameObject gameOverPrefab;
+        
     private Player.Player player;
+
+    public static bool isMenuOpen { get; private set; } = false;
     
-    // Start is called before the first frame update
+#region Unity Functions
+
     void Awake()
     {
         if (FindObjectsOfType<GameSession>().Length > 1)
@@ -39,6 +43,18 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    private void Update()
+    {
+        if (CrossPlatformInputManager.GetButtonDown(Controls.CANCEL))
+        {
+            ToggleGameMenu();
+        }
+    }
+
+#endregion
+
+#region Public Functuins
+
     public void AddToScore(int points)
     {
         score += points;
@@ -52,14 +68,66 @@ public class GameSession : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
-        Debug.Log("You died");
+        ToggleGameOver();
         ResetGameSession();
+    }
+
+    public void ToggleGameMenu()
+    {
+        if (!isMenuOpen)
+        {
+            gameMenu.SetActive(true);
+            PauseGame();
+            isMenuOpen = true;
+        }
+        else
+        {
+            gameMenu.SetActive(false);
+            ResumeGame();
+            isMenuOpen = false;
+        }
+    }
+
+    public void RestartLevel()
+    {
+        FindObjectOfType<SceneLoader>().LoadStartLevel();
+        ResetGameSession();
+    }
+    
+    public void BackToMenu()
+    {
+        ResumeGame();
+        FindObjectOfType<SceneLoader>().LoadStartMenu();
+        ResetGameSession();
+    }
+
+    
+#endregion
+
+#region Private Functions
+
+
+    private void ToggleGameOver()
+    {
+        Instantiate(gameOverPrefab, Vector3.zero, Quaternion.identity);
     }
 
     private void ResetGameSession()
     {
         AudioController.instance.StopAudio(AudioType.Overworld_2);
-        FindObjectOfType<SceneLoader>().LoadStartMenu();
         Destroy(gameObject);
     }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
+#endregion
+
 }

@@ -26,7 +26,10 @@ namespace Player
 
         private void Update()
         {
-            Shoot();
+            if (!GameSession.isMenuOpen)
+            {
+                Shoot();
+            }
         }
 
 #endregion
@@ -48,7 +51,7 @@ namespace Player
             {
                 if (!player.IsClimbing && !player.IsRolling)
                 {
-                    if (Time.time - lastShot < shootDelay) return;
+                    if (Time.time - lastShot <= shootDelay) return;
                         
                     Ray mousePosition = camera.ScreenPointToRay(Input.mousePosition);
                     Vector2 playerToMouseVector = mousePosition.origin - transform.position;

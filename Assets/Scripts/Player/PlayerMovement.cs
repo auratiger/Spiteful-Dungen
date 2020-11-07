@@ -33,7 +33,10 @@ namespace Player
 
         private void Update()
         {
-            HandleMovement();
+            if (!GameSession.isMenuOpen)
+            {
+                HandleMovement();
+            }
         }
 
 #endregion

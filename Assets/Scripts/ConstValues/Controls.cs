@@ -10,5 +10,6 @@
         public const string FIRE3 = "Fire3";
         public const string JUMP = "Jump";
         public const string INTERACT = "Interact";
+        public const string CANCEL = "Cancel";
     }
 }
