@@ -16,12 +16,12 @@ namespace Player
 
         [Header("Player script")]
         [SerializeField] private Player player;
+
         
         private ParticleSystem.EmissionModule m_FootEmission;
         private float m_EmissionBaseValue;
         private float m_GravitySlaceAtStart;
-      
-
+        
 #region Unity Functions
 
         private void Start()
@@ -29,14 +29,15 @@ namespace Player
             m_FootEmission = footsteps.emission;
             m_EmissionBaseValue = m_FootEmission.rateOverTime.constant;
             m_GravitySlaceAtStart = player.myRigidBody.gravityScale;
+
+            ConfigureInput();
         }
 
         private void Update()
         {
-            if (!GameSession.isMenuOpen)
-            {
-                HandleMovement();
-            }
+
+            HandleMovement();
+            
         }
 
 #endregion
@@ -66,27 +67,23 @@ namespace Player
         private void HandleMovement()
         {
             Move();
-            Jump();
-            Roll();
             ClimbLadder();
         }
-        
+
+        private void ConfigureInput()
+        {
+            player.inputManager.Player.Run.performed += ctx => player.IsRunning = ctx.ReadValueAsButton();
+            player.inputManager.Player.Jump.performed += ctx => Jump(ctx.ReadValueAsButton());
+            player.inputManager.Player.Roll.performed += _ => StartRoll();
+            
+        }
+
         private void Move()
         {
-            float controlThrow = CrossPlatformInputManager.GetAxis(Controls.HORIZONTAL);
+            float controlThrow = player.inputManager.Player.MovementHorizontal.ReadValue<float>(); 
                 
             Vector2 playerVelocity = new Vector2(controlThrow * movementSpeed, player.myRigidBody.velocity.y);
             player.myRigidBody.velocity = playerVelocity;
-        
-        
-            if (!player.IsRunning)
-            {
-                player.IsRunning = CrossPlatformInputManager.GetButtonDown(Controls.FIRE3);
-            }
-            else
-            {
-                player.IsRunning = !CrossPlatformInputManager.GetButtonUp(Controls.FIRE3);
-            }
 
             FootstepsParticles(controlThrow);
 
@@ -116,36 +113,27 @@ namespace Player
             }
         }
         
-        private void Jump()
+        private void Jump(bool isPressed)
         {
-            // if(!m_IsGrounded) return;
-
-            if (CrossPlatformInputManager.GetButtonDown(Controls.JUMP) && player.IsGrounded)
+            if (isPressed && player.IsGrounded)
             {
                 Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
                 player.myRigidBody.velocity += jumpVelocityToAdd;
             }
 
-            if (CrossPlatformInputManager.GetButtonUp(Controls.JUMP) && player.myRigidBody.velocity.y > 0)
+            if (!isPressed && player.myRigidBody.velocity.y > 0)
             {
                 player.myRigidBody.velocity = new Vector2(player.myRigidBody.velocity.x, player.myRigidBody.velocity.y * 0.5f);
             }
         }
-        
-        private void Roll()
-        {
-            if(!player.IsGrounded) return;
-        
-            if (CrossPlatformInputManager.GetButtonDown(Controls.FIRE2))
-            {
-                StartRoll();
-                player.LastInvulnerable = Time.time;
-            }
-        }
-        
+
         private void StartRoll()
         {
+            if(!player.IsGrounded) return;
+
             player.IsRolling = true;
+            
+            player.LastInvulnerable = Time.time;
             player.IsInvulnerable = true;
         
             Physics2D.IgnoreLayerCollision(
@@ -162,7 +150,7 @@ namespace Player
                 return;
             }
 
-            float controlThrow = CrossPlatformInputManager.GetAxis(Controls.VERTICAL);
+            float controlThrow = player.inputManager.Player.MovementVertical.ReadValue<float>(); 
             Vector2 climbVelocity = new Vector2(player.myRigidBody.velocity.x, controlThrow * climbSpeed);
             player.myRigidBody.velocity = climbVelocity;
             player.myRigidBody.gravityScale = 0;

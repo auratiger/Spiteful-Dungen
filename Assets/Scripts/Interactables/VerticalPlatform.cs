@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Interactables
@@ -8,30 +9,35 @@ namespace Interactables
         private PlatformEffector2D effector;
         private Rigidbody2D m_Rigidbody2D;
 
+        private InputManager inputManager;
+
 #region Unity Functions
 
-        // Start is called before the first frame update
+        private void Awake()
+        {
+            inputManager = new InputManager();
+        }
+
         void Start()
         {
             effector = GetComponent<PlatformEffector2D>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        }
 
-        // Update is called once per frame
-        void Update()
+            
+            inputManager.Platform.PressDown.performed += 
+                ctx => RotatePlatformOffset(ctx.ReadValueAsButton());
+        }
+        
+        private void OnEnable()
         {
-
-            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-            {
-                effector.rotationalOffset = 180f;
-            }
-
-            if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
-            {
-                effector.rotationalOffset = 0f;
-            }
+            inputManager?.Enable();
         }
 
+        private void OnDisable()
+        {
+            inputManager?.Disable();
+        }
+        
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (m_Rigidbody2D.IsTouchingLayers(LayerMask.GetMask(Layers.Player))) return;
@@ -51,7 +57,25 @@ namespace Interactables
                 body.gravityScale = 1;
             }
         }
-        
+
+
+#endregion
+
+#region Private Functions
+
+        private void RotatePlatformOffset(bool isPressed)
+        {
+            if (isPressed)
+            {
+                effector.rotationalOffset = 180f;
+            }
+            else
+            {
+                effector.rotationalOffset = 0f;
+            }
+        }
+
+
 #endregion
 
     }

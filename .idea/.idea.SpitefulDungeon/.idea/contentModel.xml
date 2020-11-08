@@ -106,6 +106,7 @@
             </e>
           </e>
         </e>
+        <e p="InputManager.cs" t="Include" />
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
             <e p="Scripts" t="Include">

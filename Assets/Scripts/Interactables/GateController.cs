@@ -1,7 +1,7 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityCore.Scene;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 namespace Interactables
 {
@@ -16,12 +16,26 @@ namespace Interactables
 
         private bool isOpen = false;
 
+        private InputManager inputmanager;
+
 #region Unity Functions
 
         private void Awake()
         {
             myAnimator = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            
+            inputmanager = new InputManager();
+        }
+
+        private void OnEnable()
+        {
+            inputmanager?.Enable();
+        }
+
+        private void OnDisable()
+        {
+            inputmanager?.Disable();
         }
 
         private void Update()
@@ -31,7 +45,6 @@ namespace Interactables
                 PlayerEnter();
             }
         }
-        
 
 #endregion
 
@@ -61,7 +74,7 @@ namespace Interactables
         {
             if (m_Rigidbody2D.IsTouchingLayers(LayerMask.GetMask(Layers.Player)))
             {
-                if (isOpen && CrossPlatformInputManager.GetAxis(Controls.VERTICAL) > 0.1)
+                if (isOpen && inputmanager.Player.Interact.triggered)
                 {
                     FindObjectOfType<SceneLoader>().LoadNextScene();
                 }

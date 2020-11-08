@@ -27,7 +27,8 @@ namespace Player
         internal BoxCollider2D legsCollider;
         internal Animator myAnimator;
         
-        
+        internal InputManager inputManager;
+
         [Serializable]
         private struct SaveData
         {
@@ -70,6 +71,18 @@ namespace Player
             legsCollider = GetComponent<BoxCollider2D>();
 
             m_Session = FindObjectOfType<GameSession>();
+            
+            inputManager = new InputManager();
+        }
+
+        private void OnEnable()
+        {
+            inputManager?.Enable();
+        }
+
+        private void OnDisable()
+        {
+            inputManager?.Disable();
         }
 
         void Update()

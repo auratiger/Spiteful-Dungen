@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7139,6 +7139,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8199529459033070320, guid: 79ff60a22acf2e04e9fbf3784aa8a6a8,
     type: 3}
   m_PrefabInstance: {fileID: 1336839060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1569050323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2742782871413539372, guid: b78b137ba8b47e34ca4f53ca4ddf7f4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 690198722}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1576836942 stripped
 Transform:
@@ -71545,16 +71551,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043301995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &2043301997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71782,7 +71807,8 @@ MonoBehaviour:
   score: 0
   healthBar: {fileID: 1082367135}
   scoreText: {fileID: 1082367133}
-  SourceRocks: []
+  gameMenu: {fileID: 0}
+  gameOverPrefab: {fileID: 0}
 --- !u!1001 &8780638308364650767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71790,16 +71816,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8780638308674220431, guid: 163d011a5015a8b44b39bb3820b08821,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.4899993
-      objectReference: {fileID: 0}
-    - target: {fileID: 8780638308674220431, guid: 163d011a5015a8b44b39bb3820b08821,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.4000006
-      objectReference: {fileID: 0}
     - target: {fileID: 8780638309694911862, guid: 163d011a5015a8b44b39bb3820b08821,
         type: 3}
       propertyPath: m_BoundingShape2D
@@ -71809,17 +71825,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8780638309694911864, guid: 163d011a5015a8b44b39bb3820b08821,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.4899993
-      objectReference: {fileID: 0}
-    - target: {fileID: 8780638309694911864, guid: 163d011a5015a8b44b39bb3820b08821,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.4000006
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1569050323}
     - target: {fileID: 8780638309701069566, guid: 163d011a5015a8b44b39bb3820b08821,
         type: 3}
       propertyPath: m_LocalPosition.x

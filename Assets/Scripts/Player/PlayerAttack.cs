@@ -1,5 +1,6 @@
 ﻿using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace Player
@@ -22,14 +23,8 @@ namespace Player
         private void Start()
         {
             camera = Camera.main;
-        }
 
-        private void Update()
-        {
-            if (!GameSession.isMenuOpen)
-            {
-                Shoot();
-            }
+            player.inputManager.Player.Attack.performed += _ => Shoot();
         }
 
 #endregion
@@ -47,38 +42,36 @@ namespace Player
 
         private void Shoot()
         {
-            if (CrossPlatformInputManager.GetButtonDown(Controls.FIRE1))
+            
+            if (!player.IsClimbing && !player.IsRolling)
             {
-                if (!player.IsClimbing && !player.IsRolling)
+                if (Time.time - lastShot <= shootDelay) return;
+                    
+                Ray mousePosition = camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+                Vector2 playerToMouseVector = mousePosition.origin - transform.position;
+                
+                CalculateRotationAngle(playerToMouseVector);
+            
+                // Rotate the player to where the mouse is pointing
+                if (playerToMouseVector.x < 0 && player.IsFacingRigth)
                 {
-                    if (Time.time - lastShot <= shootDelay) return;
-                        
-                    Ray mousePosition = camera.ScreenPointToRay(Input.mousePosition);
-                    Vector2 playerToMouseVector = mousePosition.origin - transform.position;
-
-                    CalculateRotationAngle(playerToMouseVector);
-
-                    // Rotate the player to where the mouse is pointing
-                    if (playerToMouseVector.x < 0 && player.IsFacingRigth)
-                    {
-                        player.FlipSprite();
-                    }
-                    else if (playerToMouseVector.x > 0 && !player.IsFacingRigth)
-                    {
-                        player.FlipSprite();
-                    }
-                        
-                    shooter.transform.Rotate(0f, 0f, player.RotationAngle);
-                    player.IsAttacking = true;
-                    lastShot = Time.time;
-                        
-                    GameObject arrow = Instantiate(projectile, shooter.transform.position, shooter.transform.rotation);
-                        
-                    shooter.transform.Rotate(0f, 0f, -player.RotationAngle);
+                    player.FlipSprite();
                 }
+                else if (playerToMouseVector.x > 0 && !player.IsFacingRigth)
+                {
+                    player.FlipSprite();
+                }
+                    
+                shooter.transform.Rotate(0f, 0f, player.RotationAngle);
+                player.IsAttacking = true;
+                lastShot = Time.time;
+                    
+                GameObject arrow = Instantiate(projectile, shooter.transform.position, shooter.transform.rotation);
+                    
+                shooter.transform.Rotate(0f, 0f, -player.RotationAngle);
             }
         }
-        
+
         private void CalculateRotationAngle(Vector2 playerToMouseVector)
         {
             // Debug.Log(transform.position);

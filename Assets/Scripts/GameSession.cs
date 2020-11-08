@@ -1,9 +1,9 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityCore.Audio;
 using UnityCore.Scene;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityStandardAssets.CrossPlatformInput;
 using AudioType = UnityCore.Audio.AudioType;
 
 public class GameSession : MonoBehaviour
@@ -18,6 +18,8 @@ public class GameSession : MonoBehaviour
     private Player.Player player;
 
     public static bool isMenuOpen { get; private set; } = false;
+
+    private InputManager inputManager;
     
 #region Unity Functions
 
@@ -33,7 +35,8 @@ public class GameSession : MonoBehaviour
         }
 
         player = FindObjectOfType<Player.Player>();
-        
+        inputManager = new InputManager();
+
         AudioController.instance.PlayAudio(AudioType.Overworld_2, true, 1f);
     }
 
@@ -41,14 +44,18 @@ public class GameSession : MonoBehaviour
     {
         healthBar.value = player.GetHealth();
         scoreText.text = score.ToString();
+
+        inputManager.Game.Exit.performed += _ => ToggleGameMenu();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (CrossPlatformInputManager.GetButtonDown(Controls.CANCEL))
-        {
-            ToggleGameMenu();
-        }
+        inputManager?.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputManager?.Disable();
     }
 
 #endregion
@@ -86,6 +93,7 @@ public class GameSession : MonoBehaviour
             ResumeGame();
             isMenuOpen = false;
         }
+        
     }
 
     public void RestartLevel()
